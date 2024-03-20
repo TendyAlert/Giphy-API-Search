@@ -1,20 +1,44 @@
-let form = document.querySelector('.js-form');
-let searchBar = document.querySelector('[name=keyword-search]');
-let imageContainer = document.querySelector('.js-image-container');
+const form = document.querySelector('.js-form');
+const searchBar = document.querySelector('[name=keyword-search]');
+const submitButton = document.querySelector('.js-submit-button')
+const imageContainer = document.querySelector('.js-image-container');
 let categories = null;
 
 async function fetchGiphyAPI() {
     const giphyAPI = await fetch('https://api.giphy.com/v1/gifs/categories?api_key=r7HXE5xtCUkN9hMp8STRaDtUMOJcui2e')
     const response = await giphyAPI.json(); 
     categories = response.data;
-    console.log(categories);
+    return categories;
 }
 
+async function giphySearchAPI(search) {
+    const searchAPI = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=r7HXE5xtCUkN9hMp8STRaDtUMOJcui2e&q=${search}&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clips`);
+    const response = await searchAPI.json();
+    categories = response.data;
+    let html = '';
+    imageContainer.innerHTML = categories.map(category => renderCategory(category)).join('');
 
+}
+
+function renderCategory(category) {
+    return `
+        <div class='category-item' id='${category.title}'>
+        <img src="${category.images.original.url}" alt="">
+        </div> 
+    `;
+}
+
+/*function displayCategories() {
+    if (categories === null) {
+        return;
+    }
+    imageContainer.innerHTML = categories.map(name => renderCategory(name)).join('');
+}*/
 
 function keywordSearch(event) {
     event.preventDefault(); 
-    console.log(searchBar.value);
+    giphySearchAPI(searchBar.value);
 }
 
 form.addEventListener("submit", keywordSearch);
+submitButton.addEventListener("click", keywordSearch);

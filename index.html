@@ -8,15 +8,16 @@
 </head>
 <body>
     <h1>This is a temorary header</h1>
-    <form action="#" method="GET" class="js-form">
-        <label>
-            Enter your keyword to find relevant images:
-            <input type="text" name="keyword-search" id="keyword-search">
-            <button type="submit">Search</button>
-        </label>
+    <!--Form to search giphy for specific keywords-->
+    <form action="#" method="GET" class="form js-form">
+        <section>
+            <input type="text" name="keyword-search" id="keyword-search" class="search-bar" placeholder="Search Giphy Library">
+            <input type="text" name="gif-limit" id="gif-limit" class="gif-limit-bar">
+            <!--Created my own button because the styling for the search button was uneven-->
+            <label class="submit-button js-submit-button">Submit</label>
+        </section>
     </form>
-    <section class="image-container js-image-conatiner"></section>
-
+    <section class="image-container js-image-container"></section>
     <script src="./giphy-api-search.js"></script>
 </body>
 </html>
