@@ -3,17 +3,32 @@ html {
 }
 
 body {
-    background-color: black;
+    background-color: rgb(80, 80, 80);
 }
 
 .form {
+    margin: auto;
     display: flex;
     justify-content: center;
     font-size: 25px;
+    margin: auto;
 }
 
-.search-bar {
-    padding: 10px 100px;
+.keyword-bar {
+    padding: 10px 0;
+    margin: 0px 10px;
+    width: 30%;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    text-justify: start;
+    text-align: start;
+}
+
+.number-bar {
+    padding: 10px 0;
+    width: 10%;
+    margin: 0 10px;
+    border-radius: 10px;
     font-size: 1.5rem;
     text-justify: start;
     text-align: start;
@@ -23,8 +38,24 @@ body {
     user-select: none;
     background-color: lightblue;
     color: black;
+    border: 1px white solid;
+    border-radius: 10px;
     padding: 10px 25px;
+    font-size: 1.5rem;
 }
 .submit-button:hover {
     background-color: rgb(134, 207, 231);
+    border: 1px blue solid;
+}
+
+.category-container {
+    display: flex;
+    justify-content: center;
+    background-color: blue;
+    text-align: center;
+}
+
+.category-item > img {
+    margin: 10px 40%;
+    width: 40%;
 }

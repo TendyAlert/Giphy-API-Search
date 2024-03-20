@@ -9,14 +9,14 @@
 <body>
     <h1>This is a temorary header</h1>
     <!--Form to search giphy for specific keywords-->
-    <form action="#" method="GET" class="form js-form">
-        <section>
-            <input type="text" name="keyword-search" id="keyword-search" class="search-bar" placeholder="Search Giphy Library">
-            <input type="text" name="gif-limit" id="gif-limit" class="gif-limit-bar">
-            <!--Created my own button because the styling for the search button was uneven-->
-            <label class="submit-button js-submit-button">Submit</label>
-        </section>
-    </form>
+    <section>
+        <form action="#" method="GET" class="form js-form">
+                <input type="text" name="keyword-search" id="keyword-search" class="keyword-bar" placeholder="Search Giphy Library">
+                <input type="text" name="gif-limit" id="gif-limit" class="number-bar" value="25">
+                <!--Created my own button because the styling for the search button was uneven-->
+                <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </section>
     <section class="image-container js-image-container"></section>
     <script src="./giphy-api-search.js"></script>
 </body>
