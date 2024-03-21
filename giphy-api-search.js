@@ -22,7 +22,7 @@ async function giphySearchAPI(search, number) {
 
 function renderCategory(category) {
     return `
-        <div class='category-item' id='${category.title}'>
+        <div class='category-item'>
         <img src="${category.images.original.url}" alt="${category.title}">
         </div> 
     `;

@@ -4,6 +4,7 @@ html {
 
 body {
     background-color: rgb(80, 80, 80);
+    min-width: 400px;
 }
 
 .form {
@@ -15,9 +16,9 @@ body {
 }
 
 .keyword-bar {
-    padding: 10px 0;
-    margin: 0px 10px;
-    width: 30%;
+    padding: 10px 0 10px 5px;
+    margin: 0 0 0 10px;
+    width: 70%;
     border-radius: 10px;
     font-size: 1.5rem;
     text-justify: start;
@@ -30,18 +31,18 @@ body {
     margin: 0 10px;
     border-radius: 10px;
     font-size: 1.5rem;
-    text-justify: start;
-    text-align: start;
+    text-align: center;
 }
 
 .submit-button {
-    user-select: none;
+    margin: 0 10px 0 0;
+    padding: 10px 0;
+    width: 20%;
+    border-radius: 10px;
+    border: 1px white solid;
     background-color: lightblue;
     color: black;
-    border: 1px white solid;
-    border-radius: 10px;
-    padding: 10px 25px;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 .submit-button:hover {
     background-color: rgb(134, 207, 231);
@@ -51,11 +52,17 @@ body {
 .category-container {
     display: flex;
     justify-content: center;
-    background-color: blue;
-    text-align: center;
+    flex-wrap: wrap;
+}
+
+.category-item{
+    border: 2px solid black;
+    background-color: rgb(0, 0, 133);
+    margin: 10px;
+    padding: 10px;
+    width: 350px;
 }
 
 .category-item > img {
-    margin: 10px 40%;
-    width: 40%;
+    width: 350px;
 }
