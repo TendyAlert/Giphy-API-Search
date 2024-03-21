@@ -12,9 +12,14 @@ body {
     color: rgb(157, 156, 156);
 }
 
+.navbar-nav {
+    padding-left: 55%;
+}
+
 .nav-link {
     color: lightgrey;
     font-size: 25px;
+    align-self: flex-end;
 }
 
 .form {
