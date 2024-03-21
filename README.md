@@ -4,6 +4,7 @@
 
 # Overview
     This is a website made to recieve user input and use the GIPHY API Search Endpoint to find relevant images.
+    Powered by GIPHY
 
 # How to use
     Type in query in the search box.
