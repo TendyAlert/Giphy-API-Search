@@ -4,20 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/cyborg/bootstrap.min.css" 
+    integrity="sha384-nEnU7Ae+3lD52AK+RGNzgieBWMnEfgTbRHIwEvp1XXPdqdO6uLTd/NwXbzboqjc2" 
+    crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>This is a temorary header</h1>
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+        <h2 class="navbar-header"><b>GIPHY </b>Search API</h2>
+          <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">
+                  <span class="visually-hidden">Search</span>
+                </a>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     <!--Form to search giphy for specific keywords-->
     <section>
         <form action="#" method="GET" class="form js-form">
-                <input type="text" name="keyword-search" id="keyword-search" class="keyword-bar" placeholder="Search Giphy Library">
+                <input 
+                type="text" 
+                name="keyword-search" 
+                id="keyword-search" 
+                class="keyword-bar" 
+                placeholder="Search Giphy Library"
+                >
                 <input type="text" name="gif-limit" id="gif-limit" class="number-bar" value="25">
                 <!--Created my own button because the styling for the search button was uneven-->
                 <button type="submit" class="submit-button">Submit</button>
         </form>
     </section>
     <section class="image-container js-image-container"></section>
+    <section class="about" id="about">
+      <h3>About.</h3>
+      <div class="about-paragraph">
+        <p> 
+          This is a website made to recieve user input to search the <b>GIPHY API</b> for keywords. 
+          Simply input your keyword into the search bar and input the number of desired images into the second box.
+          Then the site will use your keyword and show relevant images.
+        </p>
+      </div>
+    </section>
     <script src="./giphy-api-search.js"></script>
 </body>
 </html>
