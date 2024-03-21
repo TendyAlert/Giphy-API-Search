@@ -4,16 +4,6 @@ const numberBar = document.querySelector('[name=gif-limit]');
 const imageContainer = document.querySelector('.js-image-container');
 let categories = null;
 
-
-/* TODO for future self challenge not required for project
-async function fetchGiphyAPI() {
-    const giphyAPI = await fetch('https://api.giphy.com/v1/gifs/categories?api_key=r7HXE5xtCUkN9hMp8STRaDtUMOJcui2e')
-    const response = await giphyAPI.json();
-    categories = response.data;
-    return categories;
-} */
-
-
 // Uses giphy search api key to search giphy library and sends results to render function
 async function giphySearchAPI(search, number) {
     const searchAPI = await fetch(`
@@ -32,13 +22,6 @@ function renderCategory(category) {
         </div> 
     `;
 }
-
-/*function displayCategories() {
-    if (categories === null) {
-        return;
-    }
-    imageContainer.innerHTML = categories.map(name => renderCategory(name)).join('');
-}*/
 
 // Sends form values to search function
 function keywordSearch(event) {

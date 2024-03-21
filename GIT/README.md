@@ -23,3 +23,18 @@
     Have a dropdown with categories in it.
 
 
+# Code for future use
+    /*function displayCategories() {
+        if (categories === null) {
+            return;
+        }
+        imageContainer.innerHTML = categories.map(name => renderCategory(name)).join('');
+    }*/
+
+    /* TODO for future self challenge not required for project
+    async function fetchGiphyAPI() {
+        const giphyAPI = await fetch('https://api.giphy.com/v1/gifs/categories?api_key=r7HXE5xtCUkN9hMp8STRaDtUMOJcui2e')
+        const response = await giphyAPI.json();
+        categories = response.data;
+        return categories;
+    } */
